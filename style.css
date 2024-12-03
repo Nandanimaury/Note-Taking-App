@@ -1,0 +1,148 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  transition: background-color 0.3s ease;
+}
+
+#app {
+  width: 90%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: #96c3f3;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+button.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+/* Note Input Area */
+.note-input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#note-text {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  resize: none;
+  min-height: 100px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+button.btn {
+  background-color: #02ac07;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.btn:hover {
+  background-color: #45a049;
+}
+
+/* Notes Container */
+.notes-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.note-item {
+  position: relative;
+  background: rgba(215, 8, 8, 0.8);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(167, 62, 69, 0.1);
+  transition: background-color 0.3s ease;
+  color: white;
+}
+
+.note-item p {
+  margin-bottom: 10px;
+}
+
+.note-item button {
+  position: absolute;
+  top: 5px;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.note-item button.delete {
+  right: 5px;
+  color: rgb(200, 214, 7);
+}
+
+.note-item button.edit {
+  right: 80px;
+  color: rgb(14, 225, 42);
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #333;
+}
+
+body.dark-mode #app {
+  background-color: #444;
+  color: #fff;
+}
+
+body.dark-mode header h1 {
+  color: #fff;
+}
+
+body.dark-mode button.theme-toggle {
+  color: #fff;
+}
+
+body.dark-mode .note-item {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode button.btn {
+  background-color: #008C00;
+}
+
+body.dark-mode button.btn:hover {
+  background-color: #006400;
+}
